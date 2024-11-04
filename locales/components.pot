@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-28 08:37+0000\n"
+"POT-Creation-Date: 2024-11-04 11:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11789,6 +11789,7 @@ msgstr ""
 #: ../components/nitrokeys/storage/index.rst:6
 #: ../components/nitropad/index.rst:6
 #: ../components/nitropc/index.rst:7
+#: ../components/storage/index.rst:6
 msgid "First check the:"
 msgstr ""
 
@@ -14326,6 +14327,7 @@ msgid " Manual Firmware-Update"
 msgstr ""
 
 #: ../components/nitrokeys/storage/index.rst:2
+#: ../components/storage/index.rst:2
 msgid "Nitrokey Storage 2"
 msgstr ""
 
@@ -14466,6 +14468,7 @@ msgstr ""
 
 #: ../components/nitropad/index.rst:14
 #: ../components/nitropc/index.rst:15
+#: ../components/storage/index.rst:14
 msgid "or choose your operating system:"
 msgstr ""
 
