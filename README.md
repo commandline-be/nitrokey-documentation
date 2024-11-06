@@ -70,6 +70,18 @@ bash serve-docs.sh
 The docs will be accessible at:             
 http://localhost:8080/en/
 
+## Updating translations
+
+After having done changes to the `.rst` source files, you can push these changes to weblate and trigger the automatic translation process. This requires a [Local Weblate instance](#Local-Weblate-instance) with the variables `WEBLATE_URL` and `WEBLATE_API_KEY` set up accordingly in the `.env`-file.
+
+```bash
+# Update translations for PRIORITY_LANGUAGES
+bash update-translations.sh
+
+# Update translations for all languages
+bash update-translations.sh --all-languages
+```
+
 ## Local Weblate instance
 The easiest way to run weblate locally is using the official docker image: https://hub.docker.com/r/weblate/weblate
 
