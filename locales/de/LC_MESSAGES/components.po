@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-28 08:37+0000\n"
-"PO-Revision-Date: 2024-11-07 10:55+0000\n"
+"PO-Revision-Date: 2024-11-07 12:01+0000\n"
 "Last-Translator: dotplex <admin@dotplex.com>\n"
 "Language-Team: German <http://translatetest.nitrokey.com/projects/"
 "nitrokey-documentation/components/de/>\n"
@@ -10023,6 +10023,7 @@ msgstr ""
 "Nitrokey-App die Option \"Verschlüsseltes Volume sperren\" wählen."
 
 #: ../components/nitrokeys/features/encrypted-storage/index.rst:37
+#, fuzzy
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for `hidden volumes "
