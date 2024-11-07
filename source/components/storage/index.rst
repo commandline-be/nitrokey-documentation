@@ -21,4 +21,3 @@ or choose your operating system:
    macOS <mac/index>
    Linux <linux/index>
    
-   
