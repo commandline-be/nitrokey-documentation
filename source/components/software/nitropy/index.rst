@@ -9,5 +9,3 @@ nitropy
    All Platforms <all-platforms/index>
    Windows <windows/index>
    Linux <linux/index>
-
-This is another test.
