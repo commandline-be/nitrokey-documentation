@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-08 07:15+0000\n"
+"POT-Creation-Date: 2024-11-08 07:25+0000\n"
 "PO-Revision-Date: 2024-11-07 12:01+0000\n"
 "Last-Translator: dotplex <admin@dotplex.com>\n"
 "Language: de\n"
@@ -28492,8 +28492,9 @@ msgstr ""
 "Nitrokey Start, Nitrokey 3 und NetHSM."
 
 #: ../components/software/nitropy/index.rst:13
-msgid "This is a test for the develop branch."
-msgstr ""
+#, fuzzy
+msgid "This is another test."
+msgstr "Dies ist eine nummerierte Liste."
 
 #: ../components/software/nitropy/linux/index.rst:2
 msgid "nitropy Documentation For Linux"
@@ -45661,4 +45662,7 @@ msgstr "Beschnittene Ausgabe markieren"
 #~ " ersten Mal einstecken, kann Windows "
 #~ "einige Zeit benötigen, um das Gerät "
 #~ "zu konfigurieren."
+
+#~ msgid "This is a test for the develop branch."
+#~ msgstr ""
 
