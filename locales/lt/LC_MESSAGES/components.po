@@ -9,9 +9,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Lithuanian <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Lithuanian <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +26,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.7.2\n"
+=======
+"X-Generator: Weblate 5.8.1\n"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -9398,7 +9408,12 @@ msgid ""
 "configure timeouts, retries, instance redundancy and TCP keepalives."
 msgstr ""
 "Siekiant padidinti PKCS#11 modulio patikimumą, galima konfigūruoti laiko "
+<<<<<<< HEAD
 "limitus, pakartotinius bandymus, egzempliorių perteklių ir TCP išsaugojimą."
+=======
+"limitus, pakartotinius bandymus, egzempliorių perteklių ir TCP nuolatinį "
+"palaikymą."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:144
 #, fuzzy
@@ -9438,7 +9453,11 @@ msgstr ""
 "Jei fono gija negali būti sukurta (`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), "
 "nepavykę egzemplioriai bus bandomi įprastinių operacijų metu, o tai sulėtins "
 "užklausas. Siekiant tai sumažinti, tokie \"inline\" sveikatos patikrinimai "
+<<<<<<< HEAD
 "yra apriboti iki 1 sekundės trukmės, o per vieną užklausą galima bandyti "
+=======
+"yra apriboti iki 1 sekundės laiko, o per vieną užklausą galima bandyti "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "atlikti tik 3 sveikatos patikrinimus (tai blogiausias atvejis, kuris gali "
 "būti pasiektas tik tuo atveju, jei nepavyko daug egzempliorių)."
 
@@ -9484,11 +9503,19 @@ msgid ""
 "TCP keepalives for these."
 msgstr ""
 "Siekiant pagerinti našumą, ryšiai su \"NetHSM\" egzemplioriais laikomi "
+<<<<<<< HEAD
 "atviri, kad nereikėtų jų iš naujo atidaryti. Gali būti, kad tinkle, kuriame "
 "yra ugniasienė, šie neveikiantys ryšiai gali būti uždaryti, dėl to kitas "
 "bandymas prisijungti užtruks. Siekiant išvengti lėto išsikrovimo ir anksčiau "
 "aptikti, jei taip atsitiktų, galima sukonfigūruoti TCP keepalives (nuolatinį "
 "TCP palaikymą)."
+=======
+"atviri, kad nereikėtų jų iš naujo atidarinėti. Gali būti, kad tinkle, "
+"kuriame yra ugniasienė, šie neveikiantys ryšiai gali būti uždaryti, dėl to "
+"kitas bandymas prisijungti užtruks. Siekiant išvengti lėto išsikrovimo ir "
+"anksčiau aptikti, jei taip atsitiktų, galima sukonfigūruoti TCP keepalives ("
+"nuolatinį TCP palaikymą)."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:166
 msgid "Users"

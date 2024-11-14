@@ -50,4 +50,10 @@ OpenPGP Card
 	EID <eid>
 	Certificate-authority <certificate-authority>
 	GnuPG with Fedora <fedora-gnupg-configuration>
+<<<<<<< HEAD
 	Change Pins <change-pins>
+=======
+	Change Pins <change-pins>
+	Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
+	
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f

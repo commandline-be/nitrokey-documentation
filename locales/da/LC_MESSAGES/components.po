@@ -9,9 +9,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Danish <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Danish <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -9444,9 +9450,15 @@ msgid ""
 "TCP keepalives for these."
 msgstr ""
 "For at forbedre ydeevnen holdes forbindelser åbne med NetHSM-instanserne for "
+<<<<<<< HEAD
 "at undgå behovet for at genåbne dem. I et netværk med en firewall er det "
 "muligt, at disse inaktive forbindelser kan blive lukket, hvilket fører til, "
 "at det næste forbindelsesforsøg går i stå. For at forhindre langsomme "
+=======
+"at undgå behovet for at genåbne dem. Det er muligt, at disse inaktive "
+"forbindelser i et netværk med en firewall kan blive lukket, hvilket fører "
+"til, at det næste forbindelsesforsøg går i stå. For at forhindre langsomme "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "timeouts og for at opdage det tidligere, hvis det sker, er det muligt at "
 "konfigurere TCP keepalives for disse."
 

@@ -36,7 +36,11 @@ The user PIN is at least 6-digits long and is used to get access to the content 
 You can change the user PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey <https://www.nitrokey.com/download>`__ App open ‘Menu ->
 Configure -> Change User PIN’ to open the dialog to change the PIN.
 
+<<<<<<< HEAD
 .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/1.png
+=======
+.. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/1.png
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
    :alt: img1
 
 
@@ -45,7 +49,11 @@ You can change the User PIN in the dialog window now.
 
 The user PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the user PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have a 6 digits PIN. The default PIN is 123456.
 
+<<<<<<< HEAD
 .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/2.png
+=======
+.. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/2.png
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
    :alt: img2
 
 
@@ -58,7 +66,11 @@ The admin PIN is at least 8-digits long and is used to change contents/settings 
 You can change the admin PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey App <https://www.nitrokey.com/download>`__ open ‘Menu -> Configure ->
 Change Admin PIN’ to open the dialog to change the PIN.
 
+<<<<<<< HEAD
 .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/3.png
+=======
+.. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/3.png
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
    :alt: img3
 
 
@@ -67,7 +79,11 @@ You can change the admin PIN in the dialog window now.
 
 The admin PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the admin PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have 8 digits PIN. The default PIN is 12345678.
 
+<<<<<<< HEAD
 .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/4.png
+=======
+.. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/4.png
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
    :alt: img4
 
 

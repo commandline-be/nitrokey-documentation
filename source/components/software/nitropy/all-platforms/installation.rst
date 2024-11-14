@@ -125,16 +125,23 @@ Linux
 
 On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. Alternatively, you can install them manually::
 
-    wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+    wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/refs/heads/main/41-nitrokey.rules
     sudo mv 41-nitrokey.rules /etc/udev/rules.d/
 
 See :doc:`../linux/udev` for more information.
+
+Usage of PIV features
+---------------------
+
+To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too:
+
+    pipx install pynitrokey[pcsc]
 
 Next Steps
 ----------
 
 You can find more information on using nitropy in these guides:
 
-- For Linux: :doc:`../../../nitrokey3/linux/firmware-update`
-- For Mac: :doc:`../../../nitrokey3/mac/firmware-update`
-- For Windows: :doc:`../../../nitrokey3/windows/firmware-update`
+- For Linux: :doc:`../../../nitrokeys/nitrokey3/firmware-update`
+- For Mac: :doc:`../../../nitrokeys/nitrokey3/firmware-update`
+- For Windows: :doc:`../../../nitrokeys/nitrokey3/firmware-update`

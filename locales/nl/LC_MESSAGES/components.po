@@ -30,16 +30,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Dutch <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Dutch <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.7.2\n"
+=======
+"X-Generator: Weblate 5.8.1\n"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -9480,7 +9490,11 @@ msgstr ""
 
 #: ../components/nethsm/pkcs11-setup.rst:139
 msgid "Network reliability"
+<<<<<<< HEAD
 msgstr "Netwerk betrouwbaarheid"
+=======
+msgstr "Netwerkbetrouwbaarheid"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:141
 msgid ""
@@ -9513,7 +9527,11 @@ msgid ""
 "thread, so they won't be tried unless all instances are unreachable"
 msgstr ""
 "Mislukte instanties worden gemarkeerd als onbereikbaar en opnieuw geprobeerd "
+<<<<<<< HEAD
 "in een achtergrond thread, dus ze worden niet geprobeerd tenzij alle "
+=======
+"in een thread op de achtergrond, dus ze worden niet geprobeerd tenzij alle "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "instanties onbereikbaar zijn."
 
 #: ../components/nethsm/pkcs11-setup.rst:150
@@ -9526,12 +9544,21 @@ msgid ""
 "situation that can only be reached if a large number of instances "
 "failed)."
 msgstr ""
+<<<<<<< HEAD
 "Als er geen achtergrondthread kan worden gespawned "
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), zullen mislukte instanties worden "
 "geprobeerd tijdens normale operaties, wat de aanvragen vertraagt. Om dit te "
 "minimaliseren zijn dergelijke \"inline\" gezondheidscontroles beperkt tot "
 "time-outs van 1 seconde en kunnen er slechts 3 gezondheidscontroles per "
 "verzoek worden uitgevoerd (dit is een worst-case situatie die alleen kan "
+=======
+"Als er geen achtergrond thread kan worden gespawned "
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), zullen mislukte instanties worden "
+"geprobeerd tijdens normale operaties, wat de aanvragen vertraagt. Om dit te "
+"minimaliseren zijn dergelijke \"inline\" gezondheidscontroles beperkt tot "
+"timeouts van 1 seconde en kunnen er slechts 3 gezondheidscontroles per "
+"aanvraag worden uitgevoerd (dit is een worst case situatie die alleen kan "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "worden bereikt als een groot aantal instanties faalt)."
 
 #: ../components/nethsm/pkcs11-setup.rst:152
@@ -9551,7 +9578,11 @@ msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 msgstr ""
+<<<<<<< HEAD
 "De maximale (slechtst denkbare) duur voordat de time-out voor één API-"
+=======
+"De maximale (slechtst denkbare) duur voordat de time-out voor een API-"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "aanroep wordt bereikt is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:156
@@ -9579,8 +9610,13 @@ msgstr ""
 "open gehouden om te voorkomen dat ze opnieuw geopend moeten worden. Het is "
 "mogelijk dat in een netwerk met een firewall deze inactieve verbindingen "
 "gesloten worden, waardoor de volgende verbindingspoging een timeout krijgt. "
+<<<<<<< HEAD
 "Om langzame timeouts te voorkomen en om ze eerder te detecteren als dat toch "
 "gebeurt, is het mogelijk om TCP keepalives hiervoor te configureren."
+=======
+"Om langzame timeouts te voorkomen, en om ze eerder te detecteren als dat "
+"toch gebeurt, is het mogelijk om TCP keepalives hiervoor te configureren."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:166
 msgid "Users"

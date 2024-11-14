@@ -21,7 +21,11 @@ U2F
      - ✓
      - ✓
      - ⨯
+<<<<<<< HEAD
      - ✓
+=======
+     - ⨯
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
      - ⨯
      - ✓
 .. section products-end
@@ -31,4 +35,8 @@ U2F
 
     Desktop Login (Linux only) <desktop-login>
     Odoo Login <odoo>
+<<<<<<< HEAD
     Two Factor Authentication <2fa> 
+=======
+    Two Factor Authentication <2fa> 
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f

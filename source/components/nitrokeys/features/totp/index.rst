@@ -16,7 +16,11 @@ Two-factor Authentication with One-Time Passwords (OTP)
      - `Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_
      - `Nitrokey Storage 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_
 
+<<<<<<< HEAD
    * - ⨯
+=======
+   * - ✓
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
      - ⨯
      - ⨯
      - ⨯
@@ -32,4 +36,8 @@ Two-factor Authentication with One-Time Passwords (OTP)
     General Instructions <general>
     Microsoft <microsoft>
     Google <google>
+<<<<<<< HEAD
     Nextcloud <nextcloud>
+=======
+    Nextcloud <nextcloud>
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f

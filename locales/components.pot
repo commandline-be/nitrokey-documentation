@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-08 08:04+0000\n"
+"POT-Creation-Date: 2024-11-14 13:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -259,6 +259,9 @@ msgstr ""
 #: ../components/nethsm/administration.rst:1239
 #: ../components/nethsm/administration.rst:1270
 #: ../components/nethsm/administration.rst:1296
+#: ../components/nethsm/container/production-image.rst:48
+#: ../components/nethsm/container/production-image.rst:70
+#: ../components/nethsm/container/test-image.rst:30
 #: ../components/nethsm/getting-started.rst:130
 #: ../components/nethsm/metrics.rst:7
 #: ../components/nethsm/operation.rst:66
@@ -583,8 +586,7 @@ msgid "``-a``, ``--api``"
 msgstr ""
 
 #: ../components/nethsm/administration.rst:244
-#: ../components/nethsm/administration.rst:344
-msgid "Set the certificate for the NetHSM TLS interface"
+msgid "Get the certificate for the NetHSM TLS interface"
 msgstr ""
 
 #: ../components/nethsm/administration.rst:265
@@ -701,6 +703,10 @@ msgstr ""
 
 #: ../components/nethsm/administration.rst:335
 msgid "The certificate can be replaced as follows."
+msgstr ""
+
+#: ../components/nethsm/administration.rst:344
+msgid "Set the certificate for the NetHSM TLS interface"
 msgstr ""
 
 #: ../components/nethsm/administration.rst:352
@@ -1706,6 +1712,330 @@ msgstr ""
 msgid "The Apache test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__. Note that your browser, hopefully, will warn you that the websites certificate is self-signed."
 msgstr ""
 
+#: ../components/nethsm/container/index.rst:2
+msgid "Container"
+msgstr ""
+
+#: ../components/nethsm/container/index.rst:4
+msgid "Please refer to the following chapters to learn more about the NetHSM container images."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:2
+msgid "Production Image"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:4
+msgid "The production image is provided for production environments with high security demands. It requires an external etcd key-value store which is connected through an encrypted connection. The NetHSM process can be executed with hardware-based separation (KVM) and device-specific encryption. The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman."
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:1
+msgid "Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:3
+msgid "Network configuration"
+msgstr ""
+
+#: ../components/nitrokeys/storage/factory-reset.rst:2
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:4
+msgid "Factory reset"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:5
+msgid "Reboot"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:6
+msgid "Software update"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:11
+msgid "The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__. The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:16
+msgid "The security of the NetHSM software container strongly depends on the platform's security. A compromised platform could easily compromise a NetHSM software container it executes. In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:21
+#: ../components/nethsm/container/test-image.rst:19
+msgid "Tagging Policy"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:23
+msgid "The images in the repository are tagged with the Git commit hash and the version of the release. The latest image is tagged with ``latest``."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:27
+msgid "Modes of Operation"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:29
+msgid "The image can be run in two modes of operation, i.e. Unix process or unikernel."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:31
+msgid "The Unix process mode runs NetHSM as a process on top of the operating system."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:33
+msgid "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system. This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:38
+msgid "For security choose to run the container in the unikernel mode."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:40
+msgid "The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__)."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:43
+#: ../components/nethsm/container/test-image.rst:25
+#: ../components/nethsm/pkcs11-setup.rst:25
+#: ../components/nextbox/external-storage.rst:18
+#: ../components/nitrokeys/features/misc/automatic-screen-lock.rst:44
+#: ../components/nitrokeys/features/openpgp-card/uif.rst:40
+msgid "Configuration"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:45
+msgid "The container can be configured with the following environment variables."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:48
+#: ../components/nethsm/container/test-image.rst:30
+msgid "Environment variable"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:50
+#: ../components/nethsm/container/test-image.rst:32
+msgid "``DEBUG_LOG``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:50
+#: ../components/nethsm/container/test-image.rst:32
+msgid "Enables extended logging for NetHSM."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:52
+msgid "``UNLOCKPW``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:52
+msgid "A set unlock passphrase automatically unlocks the container during start."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:54
+msgid "``MODE``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:54
+msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:56
+msgid "``ETCD_HOST``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:56
+msgid "The URL/IP address of the host running the etcd service."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:58
+msgid "``ETCD_PORT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:58
+msgid "The port running the etcd service, defaults to `2379`."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:60
+msgid "``ETCD_CA_CERT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:60
+msgid "The path to the certificate of the CA (Certificate Authority) which signed the client certificate."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:62
+msgid "``ETCD_CLIENT_CERT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:62
+msgid "The path to the certificate for the client authentication."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:64
+msgid "``ETCD_CLIENT_KEY``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:64
+msgid "The path to the secret key for the client authentication."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:67
+msgid "The container runtime secrets such as certificates and private keys need to be set with the secrets feature of Docker or Podman."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:70
+msgid "Secret variable"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:72
+msgid "``ca_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:72
+msgid "CA certificate which signed the client certificate and server certificate."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:74
+msgid "``client_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:74
+msgid "Client certificate for authentication of the NetHSM process with the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:76
+msgid "``client_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:76
+msgid "Client key for authentication of the NetHSM process with the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:78
+msgid "``server_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:78
+msgid "Server certificate for the API of the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:80
+msgid "``server_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:80
+msgid "Server key for the API of the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:82
+msgid "``device_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:82
+msgid "Device key of the NetHSM process. To learn more about the device key refer to chapter `Terminology and Conventions <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#terminology-and-conventions>`__ in the system design."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:88
+#: ../components/nethsm/container/test-image.rst:36
+#: ../components/nitrokeys/features/misc/automatic-screen-lock.rst:106
+#: ../components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:145
+#: ../components/nitrokeys/features/openpgp-card/hard-disk-encryption/luks.rst:141
+#: ../components/nitrokeys/features/openpgp-card/openpgp-outlook.rst:28
+#: ../components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:41
+#: ../components/nitrokeys/features/openpgp-card/overview.rst:49
+#: ../components/nitrokeys/features/openpgp-card/smime/index.rst:82
+#: ../components/nitrokeys/features/openpgp-card/smime/smime-outlook.rst:38
+#: ../components/nitrokeys/features/openpgp-card/smime/smime-thunderbird.rst:47
+#: ../components/nitrokeys/features/u2f/desktop-login.rst:241
+#: ../components/nitrokeys/start/multiple-identities.rst:13
+#: ../components/software/nk-app2/passwords.rst:16
+msgid "Usage"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:90
+msgid "The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the _run_ command."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:93
+msgid "Unix Mode"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:95
+msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unix.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:98
+#: ../components/nethsm/container/production-image.rst:128
+msgid "To run the container without the compose file you need to provide an external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd. Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:102
+#: ../components/nethsm/container/production-image.rst:132
+#: ../components/nethsm/container/test-image.rst:38
+msgid "The container can be executed as follows."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:105
+#: ../components/nethsm/container/production-image.rst:135
+#: ../components/nethsm/container/test-image.rst:41
+#: ../components/nethsm/integration.rst:43
+#: ../components/nethsm/integration.rst:56
+msgid "Docker"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:110
+#: ../components/nethsm/container/production-image.rst:140
+#: ../components/nethsm/container/test-image.rst:46
+#: ../components/nethsm/integration.rst:48
+#: ../components/nethsm/integration.rst:61
+msgid "Podman"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:115
+msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:118
+#: ../components/nethsm/container/production-image.rst:149
+#: ../components/nethsm/container/test-image.rst:54
+msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:123
+msgid "Unikernel Mode"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:125
+msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unikernel.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:145
+msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:2
+msgid "Test Image"
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:4
+msgid "The test image is provided for testing and development purposes. It does not offer to run the NetHSM process with hardware-based separation (KVM), to encrypt the data store, or to use an external etcd. The connection between the NetHSM process and the integrated key-value store is unencrypted. The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:11
+msgid "The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:15
+msgid "Do not use the test image under any circumstances for production data and use cases. For production environments with high security demands you must use the production image."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:21
+msgid "The images in the repository are tagged with the Git commit hash from the main branch of the `repository <https://github.com/nitrokey/nethsm>`__. The latest image is tagged with ``testing``."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:27
+msgid "The image can be configured with the following environment variables."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:51
+msgid "This will run NetHSM as a Unix process inside the container and expose the REST API via the HTTPS protocol on port `8443`."
+msgstr ""
+
 #: ../components/nethsm/ejbca.rst:2
 msgid "EJBCA"
 msgstr ""
@@ -2078,93 +2408,38 @@ msgid "Container Image"
 msgstr ""
 
 #: ../components/nethsm/integration.rst:33
-msgid "The container image is distributed as an OCI image and can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_. It can be run locally with a compatible executor, e.g. Docker or Podman."
+msgid "NetHSM `container images <container/index.html>`__ are available for testing and production."
 msgstr ""
 
 #: ../components/nethsm/integration.rst:36
-msgid "Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:38
-msgid "network configuration"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:39
-msgid "factory reset"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:40
-#: ../components/nitropad/factory-reset-heads2.rst.inc:-1
-msgid "reboot"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:41
-msgid "software update"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:43
-#: ../components/nethsm/integration.rst:60
-msgid "The container can be executed as follows."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:46
-#: ../components/nethsm/integration.rst:63
-#: ../components/nethsm/integration.rst:84
-#: ../components/nethsm/integration.rst:97
-msgid "Docker"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:51
-#: ../components/nethsm/integration.rst:89
-#: ../components/nethsm/integration.rst:102
-msgid "Podman"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:56
-msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:58
-msgid "Additionaly to running the NetHSM as a Unix process it can be run as a unikernel supported by KVM."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:68
-msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:72
-msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:77
 msgid "Integration Into Custom Application"
 msgstr ""
 
-#: ../components/nethsm/integration.rst:79
+#: ../components/nethsm/integration.rst:38
 msgid "To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:81
+#: ../components/nethsm/integration.rst:40
 msgid "The list of all available languages can be retrieved as follows."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:94
+#: ../components/nethsm/integration.rst:53
 msgid "The NetHSM client can be generated for your programming language as follows."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:107
+#: ../components/nethsm/integration.rst:66
 msgid "The generated client code, in this example JavaScript, will be created in the ``./out/`` directory. This folder also contains the necessary documentation how to use it."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:111
+#: ../components/nethsm/integration.rst:70
 msgid "If Podman is used with enforcing SELinux, a labeling to the volume mount might be required. The mode of SELinux can be requested with ``sestatus |grep \"Current mode\"``. If the mode is set to ``enforcing``, a change to the context is required. In this case the volume mount must be postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:117
+#: ../components/nethsm/integration.rst:76
 msgid "Command-line interface"
 msgstr ""
 
-#: ../components/nethsm/integration.rst:119
+#: ../components/nethsm/integration.rst:78
 msgid "Users may administrate and use a NetHSM using a dedicated command-line interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the Python based `pynitrokey <https://pypi.org/project/pynitrokey/>`_. With ``nethsm`` an alternative third-party application exists, which is developed in the Rust crate `nethsm-cli <https://crates.io/crates/nethsm-cli/>`_."
 msgstr ""
 
@@ -3368,13 +3643,6 @@ msgstr ""
 msgid "Run ``cargo build --release`` in the source directory."
 msgstr ""
 
-#: ../components/nethsm/pkcs11-setup.rst:25
-#: ../components/nextbox/external-storage.rst:18
-#: ../components/nitrokeys/features/misc/automatic-screen-lock.rst:44
-#: ../components/nitrokeys/features/openpgp-card/uif.rst:40
-msgid "Configuration"
-msgstr ""
-
 #: ../components/nethsm/pkcs11-setup.rst:27
 msgid "By default the module searches for configuration files in:"
 msgstr ""
@@ -4372,7 +4640,6 @@ msgid "Software"
 msgstr ""
 
 #: ../components/nextbox/faq/index.rst:4
-#: ../components/nitrokeys/features/totp/index.rst:29
 msgid "Nextcloud"
 msgstr ""
 
@@ -4600,7 +4867,7 @@ msgstr ""
 #: ../components/nextbox/technical/factory-reset.rst:-1
 #: ../components/nextbox/technical/soft-reset.rst:-1
 #: ../components/nitrokeys/features/fido2/passwordless-microsoft.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:44
 #: ../components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:0
 #: ../components/nitrokeys/features/openpgp-card/eid.rst:0
 #: ../components/nitrokeys/features/openpgp-card/gpa.rst:0
@@ -4624,7 +4891,7 @@ msgstr ""
 #: ../components/nitropad/qubes/network-settings.rst:0
 #: ../components/nitropad/qubes/nitrokey-app.rst:0
 #: ../components/nitropad/ubuntu/change-disk-encryption-passphrase.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:44
 #: ../components/nitropad/content/shared-index-content1.rst:-1
 #: ../components/nitropad/default-boot.rst.inc:-1
 #: ../components/nitropad/factory-reset.rst.inc:-1
@@ -4645,7 +4912,7 @@ msgstr ""
 
 #: ../components/nextbox/gettingstarted.rst:0
 #: ../components/nitrokeys/features/fido2/passwordless-microsoft.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:57
 #: ../components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:0
 #: ../components/nitrokeys/features/openpgp-card/eid.rst:0
 #: ../components/nitrokeys/features/openpgp-card/gpa.rst:0
@@ -4667,7 +4934,7 @@ msgstr ""
 #: ../components/nitropad/qubes/network-settings.rst:0
 #: ../components/nitropad/qubes/nitrokey-app.rst:0
 #: ../components/nitropad/ubuntu/change-disk-encryption-passphrase.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:57
 #: ../components/nitropad/content/shared-index-content1.rst:-1
 #: ../components/nitropad/default-boot.rst.inc:-1
 #: ../components/nitropad/factory-reset.rst.inc:-1
@@ -5780,8 +6047,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:10
 #: ../components/nitrokeys/features/password-safe/index.rst:10
 #: ../components/nitrokeys/features/piv/index.rst:10
-#: ../components/nitrokeys/features/totp/index.rst:10
-#: ../components/nitrokeys/features/u2f/index.rst:10
 #: ../components/nitrokeys/features/fido2/index.rst:7
 #: ../components/nitrokeys/features/hsm/index.rst:7
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:10
@@ -5789,8 +6054,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:7
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:7
 #: ../components/nitrokeys/features/piv/index.rst:7
-#: ../components/nitrokeys/features/totp/index.rst:7
-#: ../components/nitrokeys/features/u2f/index.rst:7
 msgid "`Nitrokey 3 <https://docs.nitrokey.com/nitrokeys/nitrokey3/index.html>`_"
 msgstr ""
 
@@ -5812,8 +6075,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:11
 #: ../components/nitrokeys/features/password-safe/index.rst:11
 #: ../components/nitrokeys/features/piv/index.rst:11
-#: ../components/nitrokeys/features/totp/index.rst:11
-#: ../components/nitrokeys/features/u2f/index.rst:11
 #: ../components/nitrokeys/features/fido2/index.rst:8
 #: ../components/nitrokeys/features/hsm/index.rst:8
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:11
@@ -5821,8 +6082,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:8
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:8
 #: ../components/nitrokeys/features/piv/index.rst:8
-#: ../components/nitrokeys/features/totp/index.rst:8
-#: ../components/nitrokeys/features/u2f/index.rst:8
 msgid "`Nitrokey Passkey <https://docs.nitrokey.com/nitrokeys/passkey/index.html>`_"
 msgstr ""
 
@@ -5844,8 +6103,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:12
 #: ../components/nitrokeys/features/password-safe/index.rst:12
 #: ../components/nitrokeys/features/piv/index.rst:12
-#: ../components/nitrokeys/features/totp/index.rst:12
-#: ../components/nitrokeys/features/u2f/index.rst:12
 #: ../components/nitrokeys/features/fido2/index.rst:9
 #: ../components/nitrokeys/features/hsm/index.rst:9
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:12
@@ -5853,8 +6110,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:9
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:9
 #: ../components/nitrokeys/features/piv/index.rst:9
-#: ../components/nitrokeys/features/totp/index.rst:9
-#: ../components/nitrokeys/features/u2f/index.rst:9
 msgid "`Nitrokey FIDO2 <https://docs.nitrokey.com/nitrokeys/fido2/index.html>`_"
 msgstr ""
 
@@ -5876,8 +6131,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:13
 #: ../components/nitrokeys/features/password-safe/index.rst:13
 #: ../components/nitrokeys/features/piv/index.rst:13
-#: ../components/nitrokeys/features/totp/index.rst:13
-#: ../components/nitrokeys/features/u2f/index.rst:13
 #: ../components/nitrokeys/features/fido2/index.rst:10
 #: ../components/nitrokeys/features/hsm/index.rst:10
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:13
@@ -5885,8 +6138,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:10
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:10
 #: ../components/nitrokeys/features/piv/index.rst:10
-#: ../components/nitrokeys/features/totp/index.rst:10
-#: ../components/nitrokeys/features/u2f/index.rst:10
 msgid "`Nitrokey U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_"
 msgstr ""
 
@@ -5908,8 +6159,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:14
 #: ../components/nitrokeys/features/password-safe/index.rst:14
 #: ../components/nitrokeys/features/piv/index.rst:14
-#: ../components/nitrokeys/features/totp/index.rst:14
-#: ../components/nitrokeys/features/u2f/index.rst:14
 #: ../components/nitrokeys/features/fido2/index.rst:11
 #: ../components/nitrokeys/features/hsm/index.rst:11
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:14
@@ -5917,8 +6166,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:11
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:11
 #: ../components/nitrokeys/features/piv/index.rst:11
-#: ../components/nitrokeys/features/totp/index.rst:11
-#: ../components/nitrokeys/features/u2f/index.rst:11
 msgid "`Nitrokey HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_"
 msgstr ""
 
@@ -5940,8 +6187,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:15
 #: ../components/nitrokeys/features/password-safe/index.rst:15
 #: ../components/nitrokeys/features/piv/index.rst:15
-#: ../components/nitrokeys/features/totp/index.rst:15
-#: ../components/nitrokeys/features/u2f/index.rst:15
 #: ../components/nitrokeys/features/fido2/index.rst:12
 #: ../components/nitrokeys/features/hsm/index.rst:12
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:15
@@ -5949,8 +6194,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:12
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:12
 #: ../components/nitrokeys/features/piv/index.rst:12
-#: ../components/nitrokeys/features/totp/index.rst:12
-#: ../components/nitrokeys/features/u2f/index.rst:12
 msgid "`Nitrokey Pro 2 <https://docs.nitrokey.com/nitrokeys/pro/index.html>`_"
 msgstr ""
 
@@ -5972,8 +6215,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:16
 #: ../components/nitrokeys/features/password-safe/index.rst:16
 #: ../components/nitrokeys/features/piv/index.rst:16
-#: ../components/nitrokeys/features/totp/index.rst:16
-#: ../components/nitrokeys/features/u2f/index.rst:16
 #: ../components/nitrokeys/features/fido2/index.rst:13
 #: ../components/nitrokeys/features/hsm/index.rst:13
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:16
@@ -5981,8 +6222,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:13
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:13
 #: ../components/nitrokeys/features/piv/index.rst:13
-#: ../components/nitrokeys/features/totp/index.rst:13
-#: ../components/nitrokeys/features/u2f/index.rst:13
 msgid "`Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_"
 msgstr ""
 
@@ -6004,8 +6243,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:17
 #: ../components/nitrokeys/features/password-safe/index.rst:17
 #: ../components/nitrokeys/features/piv/index.rst:17
-#: ../components/nitrokeys/features/totp/index.rst:17
-#: ../components/nitrokeys/features/u2f/index.rst:17
 #: ../components/nitrokeys/features/fido2/index.rst:14
 #: ../components/nitrokeys/features/hsm/index.rst:14
 #: ../components/nitrokeys/features/openpgp-card/change-pins.rst:17
@@ -6013,8 +6250,6 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/index.rst:14
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:14
 #: ../components/nitrokeys/features/piv/index.rst:14
-#: ../components/nitrokeys/features/totp/index.rst:14
-#: ../components/nitrokeys/features/u2f/index.rst:14
 msgid "`Nitrokey Storage 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_"
 msgstr ""
 
@@ -6107,14 +6342,13 @@ msgstr ""
 #: ../components/nitrokeys/features/piv/index.rst:24
 #: ../components/nitrokeys/features/piv/index.rst:25
 #: ../components/nitrokeys/features/piv/index.rst:26
-#: ../components/nitrokeys/features/totp/index.rst:19
 #: ../components/nitrokeys/features/totp/index.rst:20
-#: ../components/nitrokeys/features/totp/index.rst:21
-#: ../components/nitrokeys/features/totp/index.rst:22
-#: ../components/nitrokeys/features/totp/index.rst:23
+#: ../components/nitrokeys/features/totp/index.rst:24
 #: ../components/nitrokeys/features/totp/index.rst:25
-#: ../components/nitrokeys/features/u2f/index.rst:23
-#: ../components/nitrokeys/features/u2f/index.rst:25
+#: ../components/nitrokeys/features/totp/index.rst:26
+#: ../components/nitrokeys/features/totp/index.rst:27
+#: ../components/nitrokeys/features/totp/index.rst:29
+#: ../components/nitrokeys/features/u2f/index.rst:29
 #: ../components/nitrokeys/features/fido2/index.rst:19
 #: ../components/nitrokeys/features/fido2/index.rst:20
 #: ../components/nitrokeys/features/fido2/index.rst:21
@@ -6150,14 +6384,13 @@ msgstr ""
 #: ../components/nitrokeys/features/piv/index.rst:21
 #: ../components/nitrokeys/features/piv/index.rst:22
 #: ../components/nitrokeys/features/piv/index.rst:23
-#: ../components/nitrokeys/features/totp/index.rst:16
 #: ../components/nitrokeys/features/totp/index.rst:17
-#: ../components/nitrokeys/features/totp/index.rst:18
-#: ../components/nitrokeys/features/totp/index.rst:19
-#: ../components/nitrokeys/features/totp/index.rst:20
+#: ../components/nitrokeys/features/totp/index.rst:21
 #: ../components/nitrokeys/features/totp/index.rst:22
-#: ../components/nitrokeys/features/u2f/index.rst:20
-#: ../components/nitrokeys/features/u2f/index.rst:22
+#: ../components/nitrokeys/features/totp/index.rst:23
+#: ../components/nitrokeys/features/totp/index.rst:24
+#: ../components/nitrokeys/features/totp/index.rst:26
+#: ../components/nitrokeys/features/u2f/index.rst:26
 msgid "⨯"
 msgstr ""
 
@@ -6224,14 +6457,10 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/uif.rst:19
 #: ../components/nitrokeys/features/password-safe/index.rst:19
 #: ../components/nitrokeys/features/piv/index.rst:19
-#: ../components/nitrokeys/features/totp/index.rst:24
-#: ../components/nitrokeys/features/totp/index.rst:26
-#: ../components/nitrokeys/features/u2f/index.rst:19
-#: ../components/nitrokeys/features/u2f/index.rst:20
-#: ../components/nitrokeys/features/u2f/index.rst:21
-#: ../components/nitrokeys/features/u2f/index.rst:22
-#: ../components/nitrokeys/features/u2f/index.rst:24
-#: ../components/nitrokeys/features/u2f/index.rst:26
+#: ../components/nitrokeys/features/totp/index.rst:28
+#: ../components/nitrokeys/features/totp/index.rst:30
+#: ../components/nitrokeys/features/u2f/index.rst:25
+#: ../components/nitrokeys/features/u2f/index.rst:30
 #: ../components/nitrokeys/features/fido2/index.rst:16
 #: ../components/nitrokeys/features/fido2/index.rst:17
 #: ../components/nitrokeys/features/fido2/index.rst:18
@@ -6253,14 +6482,10 @@ msgstr ""
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:22
 #: ../components/nitrokeys/features/openpgp-card/smime/index.rst:23
 #: ../components/nitrokeys/features/piv/index.rst:16
-#: ../components/nitrokeys/features/totp/index.rst:21
-#: ../components/nitrokeys/features/totp/index.rst:23
-#: ../components/nitrokeys/features/u2f/index.rst:16
-#: ../components/nitrokeys/features/u2f/index.rst:17
-#: ../components/nitrokeys/features/u2f/index.rst:18
-#: ../components/nitrokeys/features/u2f/index.rst:19
-#: ../components/nitrokeys/features/u2f/index.rst:21
-#: ../components/nitrokeys/features/u2f/index.rst:23
+#: ../components/nitrokeys/features/totp/index.rst:25
+#: ../components/nitrokeys/features/totp/index.rst:27
+#: ../components/nitrokeys/features/u2f/index.rst:22
+#: ../components/nitrokeys/features/u2f/index.rst:27
 #: ../components/shared-faqs/algos.rst.inc:8
 #: ../components/shared-faqs/algos.rst.inc:10
 #: ../components/shared-faqs/algos.rst.inc:12
@@ -6401,7 +6626,7 @@ msgid "Select “Security”."
 msgstr ""
 
 #: ../components/nitrokeys/features/fido2/passwordless-microsoft.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:74
 #: ../components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:0
 #: ../components/nitrokeys/features/openpgp-card/eid.rst:0
 #: ../components/nitrokeys/features/openpgp-card/gpa.rst:0
@@ -6424,7 +6649,7 @@ msgstr ""
 #: ../components/nitropad/qubes/nitrokey-app.rst:0
 #: ../components/nitropad/ubuntu/change-disk-encryption-passphrase.rst:0
 #: ../components/nitropad/ubuntu/index.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:74
 #: ../components/nitropad/default-boot.rst.inc:-1
 #: ../components/nitropad/factory-reset.rst.inc:-1
 #: ../components/nitropad/firmware-update.rst.inc:-1
@@ -6438,7 +6663,7 @@ msgid "Select “More security options”"
 msgstr ""
 
 #: ../components/nitrokeys/features/fido2/passwordless-microsoft.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:87
 #: ../components/nitrokeys/features/openpgp-card/desktop-login/smart-policy.rst:0
 #: ../components/nitrokeys/features/openpgp-card/eid.rst:0
 #: ../components/nitrokeys/features/openpgp-card/gpa.rst:0
@@ -6456,7 +6681,7 @@ msgstr ""
 #: ../components/nitrokeys/storage/firmware-update-manually.rst:-1
 #: ../components/nitropad/content/shared-index-content2.rst:-1
 #: ../components/nitropad/ubuntu/change-disk-encryption-passphrase.rst:0
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:-1
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:87
 #: ../components/nitropad/content/shared-index-content2.rst:-1
 #: ../components/nitropad/default-boot.rst.inc:-1
 #: ../components/nitropad/factory-reset.rst.inc:-1
@@ -6630,288 +6855,281 @@ msgstr ""
 msgid "The Nitrokey App can not be used for the Nitrokey FIDO2."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:28
-#: ../components/nitrokeys/fido2/getting-started.rst:21
-msgid "`Check online <https://update.nitrokey.com/>`__ if your Nitrokey FIDO2 has the latest firmware installed."
+#: ../components/nitrokeys/features/fido2/website.rst:26
+msgid "<<<<<<< HEAD .. tip::"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:32
-#: ../components/nitrokeys/fido2/getting-started.rst:25
-#: ../components/nitrokeys/nitrokey3/getting-started.rst:16
-msgid "Passwordless Authentication"
-msgstr ""
-
-#: ../components/nitrokeys/features/fido2/website.rst:34
+#: ../components/nitrokeys/features/fido2/website.rst:37
 #: ../components/nitrokeys/fido2/getting-started.rst:27
 msgid "Open a web page that supports FIDO2 (for example `Google <https://myaccount.google.com/>`__)."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:36
+#: ../components/nitrokeys/features/fido2/website.rst:39
 #: ../components/nitrokeys/fido2/getting-started.rst:29
 msgid "Log in to the website and go to “Passkeys and security keys” in the security settings of your account."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:38
+#: ../components/nitrokeys/features/fido2/website.rst:41
 #: ../components/nitrokeys/fido2/getting-started.rst:31
 msgid "Click on Create passkey."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:39
+#: ../components/nitrokeys/features/fido2/website.rst:42
 #: ../components/nitrokeys/fido2/getting-started.rst:32
 msgid "Click on Use a different device."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:40
+#: ../components/nitrokeys/features/fido2/website.rst:43
 #: ../components/nitrokeys/fido2/getting-started.rst:33
 msgid "Follow the prompts to set a PIN for your Nitrokey FIDO2."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:41
+#: ../components/nitrokeys/features/fido2/website.rst:44
 #: ../components/nitrokeys/fido2/getting-started.rst:34
 msgid "Touch the button of your Nitrokey FIDO2 when prompted."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:42
+#: ../components/nitrokeys/features/fido2/website.rst:45
 #: ../components/nitrokeys/fido2/getting-started.rst:35
 msgid "Once you have successfully configured the device, you will need to activate your Nitrokey FIDO2 this way each time you log in, after entering your PIN."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:48
+#: ../components/nitrokeys/features/fido2/website.rst:51
 #: ../components/nitrokeys/fido2/getting-started.rst:56
 msgid "Touch Button And LED Behavior"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:50
+#: ../components/nitrokeys/features/fido2/website.rst:53
 #: ../components/nitrokeys/fido2/getting-started.rst:58
 msgid "The first FIDO operation is automatically accepted within two seconds after connecting Nitrokey FIDO2. In this case touching the touch button is not required."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:54
+#: ../components/nitrokeys/features/fido2/website.rst:57
 #: ../components/nitrokeys/fido2/getting-started.rst:62
 msgid "Multiple operations can be accepted by a single touch. For this, keep the touch button touched for up to 10 seconds."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:57
+#: ../components/nitrokeys/features/fido2/website.rst:60
 #: ../components/nitrokeys/fido2/getting-started.rst:65
 #: ../components/nitrokeys/fido2/reset.rst:8
 msgid "To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations. To reset the Nitrokey FIDO2, confirm by touching the touch button for at least 5 seconds until the green or blue LED lights up."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:64
+#: ../components/nitrokeys/features/fido2/website.rst:67
 #: ../components/nitrokeys/fido2/getting-started.rst:72
 msgid "LED Color"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:64
+#: ../components/nitrokeys/features/fido2/website.rst:67
 #: ../components/nitrokeys/fido2/getting-started.rst:72
 msgid "Event"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:64
+#: ../components/nitrokeys/features/fido2/website.rst:67
 #: ../components/nitrokeys/fido2/getting-started.rst:72
 msgid "Time Period"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:64
+#: ../components/nitrokeys/features/fido2/website.rst:67
 #: ../components/nitrokeys/fido2/getting-started.rst:72
 msgid "Comments"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:66
+#: ../components/nitrokeys/features/fido2/website.rst:69
 #: ../components/nitrokeys/fido2/getting-started.rst:74
 msgid "Any (blinking)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:66
+#: ../components/nitrokeys/features/fido2/website.rst:69
 #: ../components/nitrokeys/fido2/getting-started.rst:74
 msgid "Awaiting for touch"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:66
-#: ../components/nitrokeys/features/fido2/website.rst:70
+#: ../components/nitrokeys/features/fido2/website.rst:69
+#: ../components/nitrokeys/features/fido2/website.rst:73
 #: ../components/nitrokeys/fido2/getting-started.rst:74
 #: ../components/nitrokeys/fido2/getting-started.rst:78
 msgid "Until touch is confirmed or timed out"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:70
+#: ../components/nitrokeys/features/fido2/website.rst:73
 #: ../components/nitrokeys/fido2/getting-started.rst:78
 msgid "Any (blinking faster)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:70
+#: ../components/nitrokeys/features/fido2/website.rst:73
 #: ../components/nitrokeys/fido2/getting-started.rst:78
 msgid "Touch detected, counting seconds"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:74
+#: ../components/nitrokeys/features/fido2/website.rst:77
 #: ../components/nitrokeys/fido2/getting-started.rst:82
 msgid "White (blinks)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:74
+#: ../components/nitrokeys/features/fido2/website.rst:77
 #: ../components/nitrokeys/fido2/getting-started.rst:82
 msgid "Touch request for FIDO registration or authentication operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:74
+#: ../components/nitrokeys/features/fido2/website.rst:77
 #: ../components/nitrokeys/fido2/getting-started.rst:82
 msgid "Requires 1 second touch to complete; timeout is usually about 30 seconds"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:81
+#: ../components/nitrokeys/features/fido2/website.rst:84
 #: ../components/nitrokeys/fido2/getting-started.rst:89
 msgid "Yellow (blinks)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:81
+#: ../components/nitrokeys/features/fido2/website.rst:84
 #: ../components/nitrokeys/fido2/getting-started.rst:89
 msgid "Touch request for configuration operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:81
+#: ../components/nitrokeys/features/fido2/website.rst:84
 #: ../components/nitrokeys/fido2/getting-started.rst:89
 msgid "Requires 5 seconds touch to complete; e.g. used for activating firmware update mode"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:89
+#: ../components/nitrokeys/features/fido2/website.rst:92
 #: ../components/nitrokeys/fido2/getting-started.rst:97
 msgid "Red (blinks)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:89
+#: ../components/nitrokeys/features/fido2/website.rst:92
 #: ../components/nitrokeys/fido2/getting-started.rst:97
 msgid "Touch request for reset operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:89
+#: ../components/nitrokeys/features/fido2/website.rst:92
 #: ../components/nitrokeys/fido2/getting-started.rst:97
 msgid "Available only during the very first 10 seconds after Nitrokey is powered"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:89
+#: ../components/nitrokeys/features/fido2/website.rst:92
 #: ../components/nitrokeys/fido2/getting-started.rst:97
 msgid "Requires 5 seconds touch to complete; e.g. used for FIDO2 reset operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:96
+#: ../components/nitrokeys/features/fido2/website.rst:99
 #: ../components/nitrokeys/fido2/getting-started.rst:104
 msgid "Green (constant)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:96
+#: ../components/nitrokeys/features/fido2/website.rst:99
 #: ../components/nitrokeys/fido2/getting-started.rst:104
 msgid "Touch accepted, Nitrokey is active and accepting further FIDO2 operations"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:96
+#: ../components/nitrokeys/features/fido2/website.rst:99
 #: ../components/nitrokeys/fido2/getting-started.rst:104
 msgid "After touch was registered, 10 seconds timeout"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:96
+#: ../components/nitrokeys/features/fido2/website.rst:99
 #: ../components/nitrokeys/fido2/getting-started.rst:104
 msgid "For the FIDO registration or authentication operations after a confirmation Nitrokey enters into “activation” mode, auto-accepting any following mentioned operations until touch button is released, but not longer than 10 seconds"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:116
+#: ../components/nitrokeys/features/fido2/website.rst:119
 #: ../components/nitrokeys/fido2/getting-started.rst:124
 msgid "Blue (constant)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:116
+#: ../components/nitrokeys/features/fido2/website.rst:119
 #: ../components/nitrokeys/fido2/getting-started.rst:124
 msgid "Touch consumed - accepted and used up by the operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:116
+#: ../components/nitrokeys/features/fido2/website.rst:119
 #: ../components/nitrokeys/fido2/getting-started.rst:124
 msgid "Until touch is released"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:116
+#: ../components/nitrokeys/features/fido2/website.rst:119
 #: ../components/nitrokeys/fido2/getting-started.rst:124
 msgid "Touch consumption here means, that without releasing the touch button, and touching again the Nitrokey will not confirm any new operations"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:128
+#: ../components/nitrokeys/features/fido2/website.rst:131
 #: ../components/nitrokeys/fido2/getting-started.rst:136
 msgid "White (single blink)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:128
+#: ../components/nitrokeys/features/fido2/website.rst:131
 #: ../components/nitrokeys/fido2/getting-started.rst:136
 msgid "Nitrokey ready to work"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:128
+#: ../components/nitrokeys/features/fido2/website.rst:131
 #: ../components/nitrokeys/fido2/getting-started.rst:136
 msgid "0.5 seconds after powering up"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:132
-#: ../components/nitrokeys/features/fido2/website.rst:136
+#: ../components/nitrokeys/features/fido2/website.rst:135
+#: ../components/nitrokeys/features/fido2/website.rst:139
 #: ../components/nitrokeys/fido2/getting-started.rst:140
 #: ../components/nitrokeys/fido2/getting-started.rst:144
 msgid "(no LED signal)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:132
+#: ../components/nitrokeys/features/fido2/website.rst:135
 #: ../components/nitrokeys/fido2/getting-started.rst:140
 msgid "Nitrokey is idle"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:136
+#: ../components/nitrokeys/features/fido2/website.rst:139
 #: ../components/nitrokeys/fido2/getting-started.rst:144
 msgid "Auto-accept single FIDO registration or authentication operation"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:136
+#: ../components/nitrokeys/features/fido2/website.rst:139
 #: ../components/nitrokeys/fido2/getting-started.rst:144
 msgid "Within first 2 seconds after powering up"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:136
+#: ../components/nitrokeys/features/fido2/website.rst:139
 #: ../components/nitrokeys/fido2/getting-started.rst:144
 msgid "Nitrokey is automatically accepting any single FIDO registration or authentication operation upon insertion event - the latter is treated as an equivalent of the touch button registration signal (user presence); the conf iguration/reset operations are not accepted"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:157
+#: ../components/nitrokeys/features/fido2/website.rst:160
 #: ../components/nitrokeys/fido2/getting-started.rst:165
 msgid "All colors"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:157
+#: ../components/nitrokeys/features/fido2/website.rst:160
 #: ../components/nitrokeys/fido2/getting-started.rst:165
 msgid "Nitrokey is in Firmware Update mode"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:157
+#: ../components/nitrokeys/features/fido2/website.rst:160
 #: ../components/nitrokeys/fido2/getting-started.rst:165
 msgid "Active until firmware update operation is successful, or until reinsertion"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:157
+#: ../components/nitrokeys/features/fido2/website.rst:160
 #: ../components/nitrokeys/fido2/getting-started.rst:165
 msgid "If the firmware update fails, the Nitrokey will stay in the this mode until the firmware is written correctly"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:169
+#: ../components/nitrokeys/features/fido2/website.rst:172
 msgid "Note: white LED blinking is used as well to signalize the selected device (the so called WINK command). If you are using Windows, the first time you plug in the Nitrokey it may need some time to configure the device."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:174
+#: ../components/nitrokeys/features/fido2/website.rst:177
 #: ../components/nitrokeys/features/u2f/2fa.rst:25
 #: ../components/nitrokeys/fido2/getting-started.rst:180
 msgid "Troubleshooting (Linux)"
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:176
+#: ../components/nitrokeys/features/fido2/website.rst:179
 #: ../components/nitrokeys/features/u2f/2fa.rst:27
 msgid "If the Nitrokey is not accepted immediately, you may need to copy this file `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to ``etc/udev/rules.d/``. In very rare cases, the system will need the `older version <https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__ of this file."
 msgstr ""
 
-#: ../components/nitrokeys/features/fido2/website.rst:184
+#: ../components/nitrokeys/features/fido2/website.rst:187
 #: ../components/nitrokeys/features/u2f/2fa.rst:35
 msgid "After copying the file, restart udev via ``sudo service udev restart``."
 msgstr ""
@@ -7560,21 +7778,6 @@ msgstr ""
 msgid "Once all set up, execute the script once, and it will lock the screen. It does not matter if the Nitrokey is plugged or not for this first execution."
 msgstr ""
 
-#: ../components/nitrokeys/features/misc/automatic-screen-lock.rst:106
-#: ../components/nitrokeys/features/openpgp-card/hard-disk-encryption/index.rst:145
-#: ../components/nitrokeys/features/openpgp-card/hard-disk-encryption/luks.rst:141
-#: ../components/nitrokeys/features/openpgp-card/openpgp-outlook.rst:28
-#: ../components/nitrokeys/features/openpgp-card/openvpn/viscosity.rst:41
-#: ../components/nitrokeys/features/openpgp-card/overview.rst:49
-#: ../components/nitrokeys/features/openpgp-card/smime/index.rst:82
-#: ../components/nitrokeys/features/openpgp-card/smime/smime-outlook.rst:38
-#: ../components/nitrokeys/features/openpgp-card/smime/smime-thunderbird.rst:47
-#: ../components/nitrokeys/features/u2f/desktop-login.rst:241
-#: ../components/nitrokeys/start/multiple-identities.rst:13
-#: ../components/software/nk-app2/passwords.rst:16
-msgid "Usage"
-msgstr ""
-
 #: ../components/nitrokeys/features/misc/automatic-screen-lock.rst:108
 msgid "By now you can log back to your session by entering your password, and (re)plug you Nitrokey if you did not do it before."
 msgstr ""
@@ -7678,6 +7881,194 @@ msgstr ""
 
 #: ../components/nitrokeys/features/misc/index.rst:4
 msgid "Automatic Screen Lock"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:2
+#: ../components/nitrokeys/nitrokey3/adsk.rst:2
+msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:11
+#: ../components/nitrokeys/nitrokey3/adsk.rst:11
+msgid "`Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk.html>`__ can be used to automatically add recipients when encrypting a message with GnuPG. Typical use cases include"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:14
+#: ../components/nitrokeys/nitrokey3/adsk.rst:14
+msgid "having a single encryption key for a group without the need to share the private key between the members of the group,"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:15
+#: ../components/nitrokeys/nitrokey3/adsk.rst:15
+msgid "adding a backup key to an encryption key, and"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:16
+#: ../components/nitrokeys/nitrokey3/adsk.rst:16
+msgid "setting up a master key that can decrypt messages for other keys."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:20
+#: ../components/nitrokeys/nitrokey3/adsk.rst:20
+msgid "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message for a key with an ADSK, you need GnuPG 2.2.42 or newer."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:24
+#: ../components/nitrokeys/features/openpgp-card/index.rst:29
+#: ../components/nitrokeys/nitrokey3/adsk.rst:24
+#: ../components/nitrokeys/nitrokey3/index.rst:8
+#: ../components/nitrokeys/nitrokey3/overview.rst:2
+msgid "Overview"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:26
+#: ../components/nitrokeys/nitrokey3/adsk.rst:26
+msgid "This guide explains how to add a backup key (user ID ``backup@example.com``) as an ADSK to a main key (user ID ``main@example.com``). Both keys are stored on a Nitrokey. The same steps can be used to add multiple ADSK to a key, or to add the same key as an ADSK to multiple other keys."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:31
+#: ../components/nitrokeys/nitrokey3/adsk.rst:31
+msgid "Preparing the Keys"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:33
+#: ../components/nitrokeys/nitrokey3/adsk.rst:33
+msgid "Follow one of these guides to generate the two keys:"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:35
+#: ../components/nitrokeys/nitrokey3/adsk.rst:35
+msgid ":doc:`../features/openpgp-card/openpgp-keygen-backup`"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:36
+#: ../components/nitrokeys/nitrokey3/adsk.rst:36
+msgid ":doc:`../features/openpgp-card/openpgp-keygen-on-device`"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:37
+#: ../components/nitrokeys/nitrokey3/adsk.rst:37
+msgid ":doc:`../features/openpgp-card/openpgp-keygen-gpa`"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:39
+#: ../components/nitrokeys/nitrokey3/adsk.rst:39
+msgid "Make sure that you can list both keys with ``gpg --list-keys``, for example::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:56
+#: ../components/nitrokeys/nitrokey3/adsk.rst:56
+msgid "Adding an ADSK"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:58
+#: ../components/nitrokeys/nitrokey3/adsk.rst:58
+msgid "First determine the fingerprint of the encryption subkey for the backup key::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:69
+#: ../components/nitrokeys/nitrokey3/adsk.rst:69
+msgid "Look for the line starting with ``sub`` that contains the letter ``E``, indicating a subkey with the encryption capability. The fingerprint of this subkey is listed in the next line. In this case, the fingerprint is ``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:73
+#: ../components/nitrokeys/nitrokey3/adsk.rst:73
+msgid "Then determine the fingerprint of the main key::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:82
+#: ../components/nitrokeys/nitrokey3/adsk.rst:82
+msgid "You can find it in the next line after ``pub``, in this case ``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:84
+#: ../components/nitrokeys/nitrokey3/adsk.rst:84
+msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:90
+#: ../components/nitrokeys/nitrokey3/adsk.rst:90
+msgid "The first argument is the fingerprint of the main key. The second argument is the fingerprint of the encryption subkey of the backup key."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:93
+#: ../components/nitrokeys/nitrokey3/adsk.rst:93
+msgid "You can check that the ADSK has been created::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:106
+#: ../components/nitrokeys/nitrokey3/adsk.rst:106
+msgid "The subkey with the ``R`` (restricted) capability is the ADSK. It has the same fingerprint as the encryption subkey of the backup key."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:109
+#: ../components/nitrokeys/nitrokey3/adsk.rst:109
+msgid "Now you can distribute the public key with the ADSK."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:112
+#: ../components/nitrokeys/nitrokey3/adsk.rst:112
+msgid "Using an ADSK"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:114
+#: ../components/nitrokeys/nitrokey3/adsk.rst:114
+msgid "When encrypting a message for the main key, the backup key is now automatically added as a recipient. The only requirements for this are:"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:117
+#: ../components/nitrokeys/nitrokey3/adsk.rst:117
+msgid "The sender of the message has an up-to-date public key that includes the ADSK."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:118
+#: ../components/nitrokeys/nitrokey3/adsk.rst:118
+msgid "The sender of the message uses GnuPG 2.2.42 or newer."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:120
+#: ../components/nitrokeys/nitrokey3/adsk.rst:120
+msgid "If you add the ``--verbose`` flag, you can check the keys the message is encrypted to::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:133
+#: ../components/nitrokeys/nitrokey3/adsk.rst:133
+msgid "You can also use the ``--list-packets`` option to check an encrypted message::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:139
+#: ../components/nitrokeys/nitrokey3/adsk.rst:139
+msgid "Each ``pubkey enc packet`` line represents one key that can decrypt the message."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:143
+#: ../components/nitrokeys/nitrokey3/adsk.rst:143
+msgid "Revoking an ADSK"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:145
+#: ../components/nitrokeys/nitrokey3/adsk.rst:145
+msgid "If you revoke an ADSK, it will no longer be added as a recipient when encrypting a message. To perform a revocation, open the key with ``gpg --edit-key``::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:165
+#: ../components/nitrokeys/nitrokey3/adsk.rst:165
+msgid "Select the subkey to revoke with ``key N``. The selected subkey is marked with an asterisk::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:184
+#: ../components/nitrokeys/nitrokey3/adsk.rst:184
+msgid "Revoke the subkey with ``revkey`` and then save the changes with ``save``::"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:218
+#: ../components/nitrokeys/nitrokey3/adsk.rst:218
+msgid "Now distribute the updated public key."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/adsk.rst:222
+#: ../components/nitrokeys/nitrokey3/adsk.rst:222
+msgid "The revocation will only become effective once the sender has updated the public key with the revoked ADSK. Messages that have already been encrypted can still be decrypted with the ADSK even if it is revoked."
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/certificate-authority.rst:2
@@ -7888,40 +8279,65 @@ msgstr ""
 msgid "You can change the user PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey <https://www.nitrokey.com/download>`__ App open ‘Menu -> Configure -> Change User PIN’ to open the dialog to change the PIN."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:44
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:44
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:39
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:39
+msgid "<<<<<<< HEAD .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/1.png ======= .. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/1.png >>>>>>> 61af9493c231b58683be87b296c8974e87380f3f"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:0
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:0
+msgid "alt"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:48
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:48
 msgid "You can change the User PIN in the dialog window now."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:46
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:46
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:50
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:50
 msgid "The user PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the user PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have a 6 digits PIN. The default PIN is 123456."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:54
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:52
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:52
+msgid "<<<<<<< HEAD .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/2.png ======= .. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/2.png >>>>>>> 61af9493c231b58683be87b296c8974e87380f3f"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:62
 #: ../components/nitrokeys/nitrokey3/set-pins.rst:111
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:54
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:62
 msgid "Admin PIN"
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:56
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:56
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:64
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:64
 msgid "The admin PIN is at least 8-digits long and is used to change contents/settings of the Nitrokey. That is to say after initializing the Nitrokey you probably won’t need this PIN too often (e.g. if you want to add another password to the password safe of the Nitrokey Pro or Nitrokey Storage)."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:58
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:58
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:66
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:66
 msgid "You can change the admin PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey App <https://www.nitrokey.com/download>`__ open ‘Menu -> Configure -> Change Admin PIN’ to open the dialog to change the PIN."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:66
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:66
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:69
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:69
+msgid "<<<<<<< HEAD .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/3.png ======= .. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/3.png >>>>>>> 61af9493c231b58683be87b296c8974e87380f3f"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:78
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:78
 msgid "You can change the admin PIN in the dialog window now."
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:68
-#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:68
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:80
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:80
 msgid "The admin PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the admin PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have 8 digits PIN. The default PIN is 12345678."
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:82
+#: ../components/nitrokeys/features/openpgp-card/change-pins.rst:82
+msgid "<<<<<<< HEAD .. figure:: /nitrokeys/features/openpgp-card/images/change-pins/4.png ======= .. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/4.png >>>>>>> 61af9493c231b58683be87b296c8974e87380f3f"
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/desktop-login/index.rst:8
@@ -8612,13 +9028,6 @@ msgid "SystemD supports unlocking a LUKS2 partition using a X509 certificate, fi
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/index.rst:29
-#: ../components/nitrokeys/nitrokey3/adsk.rst:19
-#: ../components/nitrokeys/nitrokey3/index.rst:8
-#: ../components/nitrokeys/nitrokey3/overview.rst:2
-msgid "Overview"
-msgstr ""
-
-#: ../components/nitrokeys/features/openpgp-card/index.rst:29
 msgid "Keygen with GPA"
 msgstr ""
 
@@ -8704,13 +9113,28 @@ msgstr ""
 msgid "GnuPG with Fedora"
 msgstr ""
 
-#: ../components/nitrokeys/features/openpgp-card/index.rst:29
-msgid "Change Pins"
-msgstr ""
-
 #: ../components/nitrokeys/features/openpgp-card/index.rst:2
 #: ../components/nitrokeys/nitrokey3/set-pins.rst:84
 msgid "OpenPGP Card"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/index.rst:53
+#: ../components/nitrokeys/features/totp/index.rst:19
+#: ../components/nitrokeys/features/totp/index.rst:39
+#: ../components/nitrokeys/features/u2f/index.rst:24
+#: ../components/nitrokeys/features/u2f/index.rst:38
+#: ../components/nitrokeys/nitrokey3/index.rst:27
+#: ../components/nitrokeys/features/totp/index.rst:16
+#: ../components/nitrokeys/features/u2f/index.rst:21
+msgid "<<<<<<< HEAD"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/index.rst:54
+msgid "Change Pins <change-pins>"
+msgstr ""
+
+#: ../components/nitrokeys/features/openpgp-card/index.rst:59
+msgid ">>>>>>> 61af9493c231b58683be87b296c8974e87380f3f"
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/ipsec.rst:31
@@ -9369,7 +9793,7 @@ msgid "This guide shows how to configure OpenVPN clients to login using a `Nitro
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/openvpn/easyrsa.rst:19
-msgid "To sign the certificates, we will use a `Nitrokey HSM 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ set up as `Certificate Authority <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <certificate-authority.html#sign-a-server-certificate>`_)."
+msgid "To sign the certificates, we will use a `Nitrokey HSM 2 <https://shop.nitrokey.com/shop/nkhs2-nitrokey-hsm-2-7>`__ set up as `Certificate Authority <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <certificate-authority.html#sign-a-server-certificate>`_)."
 msgstr ""
 
 #: ../components/nitrokeys/features/openpgp-card/openvpn/easyrsa.rst:22
@@ -11082,51 +11506,55 @@ msgstr ""
 msgid "The use of One-time Passwords (OTP) is called very differently on the various services supporting it. Sometimes it is referred to as Multi-factor Authentication (MFA), sometimes it is Two-factor Authentication (2FA) or just “authentication via authenticator app” like Google Authenticator. Most of these services are compatible for usage with the Nitrokey Pro and Nitrokey Storage. The following instructions show how to enable OTP on our `support forum <https://support.nitrokey.com/>`__. The procedure is quite similar on most services. For a list of websites supporting OTP have a look at `dongleauth.com <https://www.dongleauth.com/>`__."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:12
-msgid "You need to have the `Nitrokey App <https://www.nitrokey.com/download>`__ installed to use the OTP feature of the Nitrokey Pro and Nitrokey Storage."
+#: ../components/nitrokeys/features/totp/general.rst:13
+msgid "For the Nitrokey 3 the Nitrokey App 2 has to be used to set up TOTP. See :doc:`../../../software/nk-app2/index`."
 msgstr ""
 
 #: ../components/nitrokeys/features/totp/general.rst:15
+msgid "You need to have the `Nitrokey App <https://www.nitrokey.com/download>`__ installed to use the OTP feature of the Nitrokey Pro and Nitrokey Storage."
+msgstr ""
+
+#: ../components/nitrokeys/features/totp/general.rst:18
 msgid "Configure a Website/Application to Use OTP"
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:17
+#: ../components/nitrokeys/features/totp/general.rst:20
 msgid "Login to the website which supports OTP (in this example, the `support forum <https://support.nitrokey.com/>`__). Usually you find the option to enable two-factor-authentication under your profile or in the settings."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:24
+#: ../components/nitrokeys/features/totp/general.rst:27
 msgid "Most of the time, you will get a QR-Code as seen below. There should be an option, to show the secret key directly."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:31
+#: ../components/nitrokeys/features/totp/general.rst:34
 msgid "We need to copy the secret code."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:33
+#: ../components/nitrokeys/features/totp/general.rst:36
 msgid "This is what the Nitrokey is actually protecting. You may create a backup of it now (in case the Nitrokey get lost or breaks) by writing it down on a sheet of paper and storing it securely. But be aware that anybody who is in possession of this secret code, can create one-time passwords for your account! *Please note that you won’t be able to backup this code, once it is stored in the Nitrokey!*"
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:40
+#: ../components/nitrokeys/features/totp/general.rst:43
 msgid "Now start the Nitrokey App and open the “OTP Slot Configuration”."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:47
+#: ../components/nitrokeys/features/totp/general.rst:50
 msgid "Paste in the secret key in the corresponding field and choose an appropiate slot name. Click on “Save” and type in your admin PIN if requested."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:54
+#: ../components/nitrokeys/features/totp/general.rst:57
 msgid "After saving the slot you can go to “Menu” -> “Passwords” -> YourSlotName to get your very first one-time password."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:62
+#: ../components/nitrokeys/features/totp/general.rst:65
 msgid "The one-time password is copied to your clipboard automatically. You just need to paste it to the field on the website to confirm the correct setup and thus to activate the two-factor authentication."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:70
+#: ../components/nitrokeys/features/totp/general.rst:73
 msgid "Securely Login to Website/Application"
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/general.rst:72
+#: ../components/nitrokeys/features/totp/general.rst:75
 msgid "From now on you will get asked for a one-time password additionally to your other credentials if you try to login the the website. You just need to open the Nitrokey App and go to “Menu” -> “Passwords” -> YourSlotName again to get the one-time password."
 msgstr ""
 
@@ -11170,16 +11598,20 @@ msgstr ""
 msgid "It is possible to use the same secret key for the Google Autenticator app and the Nitrokey App as well. Just make sure to follow the above procedure and use the qrcode for the Authenticator app afterwards before clicking “Next”. Now you can use either the Google Authenticator app or the Nitrokey App."
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/index.rst:29
+#: ../components/nitrokeys/features/totp/index.rst:33
 msgid "General Instructions"
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/index.rst:29
+#: ../components/nitrokeys/features/totp/index.rst:33
 msgid "Microsoft"
 msgstr ""
 
-#: ../components/nitrokeys/features/totp/index.rst:29
+#: ../components/nitrokeys/features/totp/index.rst:33
 msgid "Google"
+msgstr ""
+
+#: ../components/nitrokeys/features/totp/index.rst:40
+msgid "Nextcloud <nextcloud>"
 msgstr ""
 
 #: ../components/nitrokeys/features/totp/microsoft.rst:2
@@ -11570,16 +12002,16 @@ msgstr ""
 msgid "You will also lose the ability to use ``sudo`` if you set up Central Authentication Mapping *and* used the ``required`` or ``requisite`` flags."
 msgstr ""
 
-#: ../components/nitrokeys/features/u2f/index.rst:29
+#: ../components/nitrokeys/features/u2f/index.rst:33
 msgid "Desktop Login (Linux only)"
 msgstr ""
 
-#: ../components/nitrokeys/features/u2f/index.rst:29
+#: ../components/nitrokeys/features/u2f/index.rst:33
 msgid "Odoo Login"
 msgstr ""
 
-#: ../components/nitrokeys/features/u2f/index.rst:29
-msgid "Two Factor Authentication"
+#: ../components/nitrokeys/features/u2f/index.rst:39
+msgid "Two Factor Authentication <2fa>"
 msgstr ""
 
 #: ../components/nitrokeys/features/u2f/odoo.rst:2
@@ -11706,7 +12138,7 @@ msgstr ""
 
 #: ../components/nitrokeys/fido2/firmware-update.rst:26
 #: ../components/nitrokeys/nitrokey3/firmware-update.rst:26
-#: ../components/software/nitropy/all-platforms/test.rst:7
+#: ../components/software/nitropy/all-platforms/test.rst:6
 msgid "Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions`_ for your OS."
 msgstr ""
 
@@ -11731,8 +12163,17 @@ msgstr ""
 #: ../components/nitrokeys/fido2/firmware-update.rst:32
 #: ../components/nitrokeys/nitrokey3/firmware-update-qubes.rst:38
 #: ../components/nitrokeys/nitrokey3/firmware-update.rst:33
-#: ../components/software/nitropy/all-platforms/test.rst:29
+#: ../components/software/nitropy/all-platforms/test.rst:28
 msgid "In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``)."
+msgstr ""
+
+#: ../components/nitrokeys/fido2/getting-started.rst:21
+msgid "`Check online <https://update.nitrokey.com/>`__ if your Nitrokey FIDO2 has the latest firmware installed."
+msgstr ""
+
+#: ../components/nitrokeys/fido2/getting-started.rst:25
+#: ../components/nitrokeys/nitrokey3/getting-started.rst:16
+msgid "Passwordless Authentication"
 msgstr ""
 
 #: ../components/nitrokeys/fido2/getting-started.rst:48
@@ -11803,7 +12244,7 @@ msgstr ""
 
 #: ../components/nitrokeys/fido2/index.rst:23
 #: ../components/nitrokeys/hsm/index.rst:15
-#: ../components/nitrokeys/nitrokey3/index.rst:29
+#: ../components/nitrokeys/nitrokey3/index.rst:32
 #: ../components/nitrokeys/pro/index.rst:24
 #: ../components/nitrokeys/start/index.rst:25
 #: ../components/nitrokeys/storage/index.rst:24
@@ -11811,12 +12252,12 @@ msgid "or check out the features:"
 msgstr ""
 
 #: ../components/nitrokeys/fido2/index.rst:25
-#: ../components/nitrokeys/nitrokey3/index.rst:31
+#: ../components/nitrokeys/nitrokey3/index.rst:34
 msgid "`FIDO2 <../features/fido2/index.html>`_"
 msgstr ""
 
 #: ../components/nitrokeys/fido2/index.rst:26
-#: ../components/nitrokeys/nitrokey3/index.rst:32
+#: ../components/nitrokeys/nitrokey3/index.rst:35
 #: ../components/nitrokeys/pro/index.rst:26
 #: ../components/nitrokeys/storage/index.rst:26
 #: ../components/nitrokeys/u2f/index.rst:8
@@ -12195,150 +12636,6 @@ msgstr ""
 msgid "Nitrokeys"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/adsk.rst:2
-msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:6
-msgid "`Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk.html>`__ can be used to automatically add recipients when encrypting a message with GnuPG. Typical use cases include"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:9
-msgid "having a single encryption key for a group without the need to share the private key between the members of the group,"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:10
-msgid "adding a backup key to an encryption key, and"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:11
-msgid "setting up a master key that can decrypt messages for other keys."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:15
-msgid "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message for a key with an ADSK, you need GnuPG 2.2.42 or newer."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:21
-msgid "This guide explains how to add a backup key (user ID ``backup@example.com``) as an ADSK to a main key (user ID ``main@example.com``). Both keys are stored on a Nitrokey. The same steps can be used to add multiple ADSK to a key, or to add the same key as an ADSK to multiple other keys."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:26
-msgid "Preparing the Keys"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:28
-msgid "Follow one of these guides to generate the two keys:"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:30
-msgid ":doc:`../features/openpgp-card/openpgp-keygen-backup`"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:31
-msgid ":doc:`../features/openpgp-card/openpgp-keygen-on-device`"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:32
-msgid ":doc:`../features/openpgp-card/openpgp-keygen-gpa`"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:34
-msgid "Make sure that you can list both keys with ``gpg --list-keys``, for example::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:51
-msgid "Adding an ADSK"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:53
-msgid "First determine the fingerprint of the encryption subkey for the backup key::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:64
-msgid "Look for the line starting with ``sub`` that contains the letter ``E``, indicating a subkey with the encryption capability. The fingerprint of this subkey is listed in the next line. In this case, the fingerprint is ``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:68
-msgid "Then determine the fingerprint of the main key::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:77
-msgid "You can find it in the next line after ``pub``, in this case ``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:79
-msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:85
-msgid "The first argument is the fingerprint of the main key. The second argument is the fingerprint of the encryption subkey of the backup key."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:88
-msgid "You can check that the ADSK has been created::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:101
-msgid "The subkey with the ``R`` (restricted) capability is the ADSK. It has the same fingerprint as the encryption subkey of the backup key."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:104
-msgid "Now you can distribute the public key with the ADSK."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:107
-msgid "Using an ADSK"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:109
-msgid "When encrypting a message for the main key, the backup key is now automatically added as a recipient. The only requirements for this are:"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:112
-msgid "The sender of the message has an up-to-date public key that includes the ADSK."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:113
-msgid "The sender of the message uses GnuPG 2.2.42 or newer."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:115
-msgid "If you add the ``--verbose`` flag, you can check the keys the message is encrypted to::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:128
-msgid "You can also use the ``--list-packets`` option to check an encrypted message::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:134
-msgid "Each ``pubkey enc packet`` line represents one key that can decrypt the message."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:138
-msgid "Revoking an ADSK"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:140
-msgid "If you revoke an ADSK, it will no longer be added as a recipient when encrypting a message. To perform a revocation, open the key with ``gpg --edit-key``::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:160
-msgid "Select the subkey to revoke with ``key N``. The selected subkey is marked with an asterisk::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:179
-msgid "Revoke the subkey with ``revkey`` and then save the changes with ``save``::"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:213
-msgid "Now distribute the updated public key."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/adsk.rst:217
-msgid "The revocation will only become effective once the sender has updated the public key with the revoked ADSK. Messages that have already been encrypted can still be decrypted with the ADSK even if it is revoked."
-msgstr ""
-
 #: ../components/nitrokeys/nitrokey3/faq.rst:2
 msgid "Nitrokey 3 FAQ"
 msgstr ""
@@ -12380,7 +12677,7 @@ msgid "The Nitrokey 3 doesn't contain storage capability for ordinary data (it c
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/faq.rst:35
-msgid "**Q:** Why does the Nitrokey 3 not show up in GnuPG"
+msgid "**Q:** Why does the Nitrokey 3 not show up in GnuPG?"
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/faq.rst:34
@@ -12688,22 +12985,22 @@ msgstr ""
 msgid " Troubleshooting"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/index.rst:18
-msgid " Additional Decryption Subkeys (ADSK) with GnuPG"
+#: ../components/nitrokeys/nitrokey3/index.rst:28
+msgid "Additional Decryption Subkeys (ADSK) with GnuPG <adsk>"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/index.rst:33
+#: ../components/nitrokeys/nitrokey3/index.rst:36
 #: ../components/nitrokeys/pro/index.rst:28
 #: ../components/nitrokeys/start/index.rst:27
 #: ../components/nitrokeys/storage/index.rst:28
 msgid "`OpenPGP Card <../features/openpgp-card/index.html>`_"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/index.rst:34
+#: ../components/nitrokeys/nitrokey3/index.rst:37
 msgid "`Password Safe <../features/password-safe/index.html>`_"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/index.rst:36
+#: ../components/nitrokeys/nitrokey3/index.rst:39
 msgid "Additional features like `PIV (Windows only) <../features/piv/index.html>`_ are available in test firmware releases. See the `release notes`_ on GitHub for more information."
 msgstr ""
 
@@ -13197,87 +13494,115 @@ msgid "Please make sure FIDO2 is working correctly. Otherwise NFC won't work eit
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:33
-msgid "Also check if you are using the right spot on your smartphone. Find the right spot using: `nfc.fail`_."
+msgid "Also check if you are using the right spot on your smartphone."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:36
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:35
 msgid "The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:38
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:37
 msgid "If you have a phone cover, try to find the right spot first without it. Retry afterwards with the cover."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:40
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:39
 msgid "The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:43
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:42
 msgid "OpenPGP Troubleshooting"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:46
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:45
 msgid "GnuPG: OpenPGP Card Not Available"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:48
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:47
 msgid "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error message like this::"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:55
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:54
 msgid "**Solution:** There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic smartcard daemon. ``scdaemon`` has two drivers for accessing smartcards: Its integrated ``ccid`` driver tries to directly access the smartcard. The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:61
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:60
 msgid "A smartcard can only be accessed directly by one daemon. This means that depending on the startup order, ``pcscd`` might lock the card before ``scdaemon`` tries to access it using the internal ``ccid`` driver. Therefore we recommend to use the ``pcscd`` driver for ``scdaemon``. You can activate it by adding ``disable-ccid`` to the ``~/.gnupg/scdaemon.conf`` config file and restarting ``scdaemon``, for example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not fix the problem, see the next section for more information."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:67
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:66
 msgid "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this conflict."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:70
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:69
 msgid "pcscd: Card Not Found"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:72
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:71
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:75
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:74
 msgid "**Solution:** First, make sure that ``scdaemon`` is not running (see the previous section)::"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:80
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:79
 msgid "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. You should see an entry like this one::"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:88
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:87
 msgid "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it. If it does not show up, make sure that your ``libccid`` version is up to date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:93
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:92
 msgid "Updating The Device Database"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:95
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:94
 msgid "If you cannot update ``libccid`` to a supported version, you have to manually update the device database. The path of the database depends on your distribution:"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:98
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:97
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:100
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:99
 msgid "Make sure to backup the file before overwriting it. You can download an `updated device database file <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ from the ``nitrokey-3-firmware`` repository. After updating the file, restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should now show up."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:106
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:105
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:108
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:107
 msgid "Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:110
+msgid "PIV Troubleshooting"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:113
+msgid "Pyscard is not available"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:115
+msgid "If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality:"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:117
+msgid "This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available for more information"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:119
+msgid "To fix this error, please install nitropy with the `pcsc` extra dependencies:"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:121
+msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:124
+msgid "If you install pynitrokey through another distrubition channel, please install all optional dependencies for this channel."
 msgstr ""
 
 #: ../components/nitrokeys/passkey/index.rst:2
@@ -14000,10 +14325,6 @@ msgstr ""
 
 #: ../components/nitrokeys/start/setting-kdf-do.rst:52
 msgid "Curve 25519 keys"
-msgstr ""
-
-#: ../components/nitrokeys/storage/factory-reset.rst:2
-msgid "Factory reset"
 msgstr ""
 
 #: ../components/nitrokeys/storage/factory-reset.rst:6
@@ -14731,6 +15052,10 @@ msgstr ""
 
 #: ../components/nitropad/factory-reset-heads2.rst.inc:96
 msgid "confirm the subsequent restart."
+msgstr ""
+
+#: ../components/nitropad/factory-reset-heads2.rst.inc:-1
+msgid "reboot"
 msgstr ""
 
 #: ../components/nitropad/factory-reset-heads2.rst.inc:-1
@@ -16660,23 +16985,35 @@ msgid "See :doc:`../linux/udev` for more information."
 msgstr ""
 
 #: ../components/software/nitropy/all-platforms/installation.rst:134
-msgid "Next Steps"
+msgid "Usage of PIV features"
 msgstr ""
 
 #: ../components/software/nitropy/all-platforms/installation.rst:136
-msgid "You can find more information on using nitropy in these guides:"
+msgid "To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too:"
 msgstr ""
 
 #: ../components/software/nitropy/all-platforms/installation.rst:138
-msgid "For Linux: :doc:`../../../nitrokey3/linux/firmware-update`"
+msgid "pipx install pynitrokey[pcsc]"
 msgstr ""
 
-#: ../components/software/nitropy/all-platforms/installation.rst:139
-msgid "For Mac: :doc:`../../../nitrokey3/mac/firmware-update`"
+#: ../components/software/nitropy/all-platforms/installation.rst:141
+msgid "Next Steps"
 msgstr ""
 
-#: ../components/software/nitropy/all-platforms/installation.rst:140
-msgid "For Windows: :doc:`../../../nitrokey3/windows/firmware-update`"
+#: ../components/software/nitropy/all-platforms/installation.rst:143
+msgid "You can find more information on using nitropy in these guides:"
+msgstr ""
+
+#: ../components/software/nitropy/all-platforms/installation.rst:145
+msgid "For Linux: :doc:`../../../nitrokeys/nitrokey3/firmware-update`"
+msgstr ""
+
+#: ../components/software/nitropy/all-platforms/installation.rst:146
+msgid "For Mac: :doc:`../../../nitrokeys/nitrokey3/firmware-update`"
+msgstr ""
+
+#: ../components/software/nitropy/all-platforms/installation.rst:147
+msgid "For Windows: :doc:`../../../nitrokeys/nitrokey3/firmware-update`"
 msgstr ""
 
 #: ../components/software/nitropy/all-platforms/test.rst:2
@@ -16687,15 +17024,15 @@ msgstr ""
 msgid "This guide describes how to test the Nitrokey 3."
 msgstr ""
 
-#: ../components/software/nitropy/all-platforms/test.rst:8
+#: ../components/software/nitropy/all-platforms/test.rst:7
 msgid "Run ``nitropy nk3 test`` this will launch several tests over your key."
 msgstr ""
 
-#: ../components/software/nitropy/all-platforms/test.rst:9
+#: ../components/software/nitropy/all-platforms/test.rst:8
 msgid "During the test, when asked touch the key."
 msgstr ""
 
-#: ../components/software/nitropy/all-platforms/test.rst:11
+#: ../components/software/nitropy/all-platforms/test.rst:10
 msgid "This is an example of a working key::"
 msgstr ""
 

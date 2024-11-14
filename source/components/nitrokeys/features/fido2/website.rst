@@ -23,11 +23,14 @@ The Nitrokey FIDO2 can be used with any current browser.
 
    The Nitrokey App can not be used for the Nitrokey FIDO2.
 
+<<<<<<< HEAD
 .. tip::
 
    `Check online <https://update.nitrokey.com/>`__ if your Nitrokey
    FIDO2 has the latest firmware installed.
 
+=======
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 Passwordless Authentication
 ---------------------------
 

@@ -9,9 +9,15 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Latvian <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Latvian <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +25,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.7.2\n"
+=======
+"X-Generator: Weblate 5.8.1\n"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -9321,7 +9331,11 @@ msgid ""
 "configure timeouts, retries, instance redundancy and TCP keepalives."
 msgstr ""
 "Lai uzlabotu PKCS#11 moduļa uzticamību, ir iespējams konfigurēt laika "
+<<<<<<< HEAD
 "ierobežojumus, atkārtojumus, instanču dublēšanu un TCP saglabāšanas iespējas."
+=======
+"ierobežojumus, atkārtojumus, instanču dublēšanu un TCP saglabāšanu."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:144
 #, fuzzy
@@ -9360,7 +9374,11 @@ msgid ""
 "failed)."
 msgstr ""
 "Ja nav iespējams izveidot fona pavedienu "
+<<<<<<< HEAD
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), neizdevušies gadījumi tiks "
+=======
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), neveiksmīgie gadījumi tiks "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "izmēģināti parasto darbību laikā, palēninot pieprasījumu izpildi. Lai to "
 "mazinātu, šādām \"inline\" veselības pārbaudēm ir noteikts 1 sekundes laika "
 "ierobežojums, un vienā pieprasījumā var mēģināt veikt tikai 3 veselības "

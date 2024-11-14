@@ -9,16 +9,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Czech <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Czech <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.7.2\n"
+=======
+"X-Generator: Weblate 5.8.1\n"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -9334,8 +9344,14 @@ msgstr ""
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), budou se neúspěšné instance zkoušet "
 "během běžných operací, což zpomalí požadavky. Aby se to minimalizovalo, jsou "
 "takové \"inline\" kontroly stavu omezeny na 1sekundový timeout a na jeden "
+<<<<<<< HEAD
 "požadavek se lze pokusit pouze o 3 kontroly stavu (to je nejhorší případ, "
 "kterého lze dosáhnout pouze v případě velkého počtu selhaných instancí)."
+=======
+"požadavek se lze pokusit provést pouze 3 kontroly stavu (to je nejhorší "
+"případ, kterého lze dosáhnout pouze v případě velkého počtu selhání "
+"instancí)."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:152
 msgid "Therefore:"

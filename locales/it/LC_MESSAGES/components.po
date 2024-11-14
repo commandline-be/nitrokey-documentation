@@ -30,16 +30,26 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2024-11-04 12:19+0000\n"
 "Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: Italian <http://translatetest.nitrokey.com/projects/"
+=======
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Italian <http://translate.nitrokey.com/projects/"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "nitrokey-documentation/components/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.7.2\n"
+=======
+"X-Generator: Weblate 5.8.1\n"
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -8646,7 +8656,11 @@ msgstr ""
 
 #: ../components/nethsm/operation.rst:141
 msgid "Import a private key from a PEM file into NetHSM as follows."
+<<<<<<< HEAD
 msgstr "Importa una chiave privata da un file PEM in NetHSM come segue."
+=======
+msgstr "Importare una chiave privata da un file PEM in NetHSM come segue."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/operation.rst:154
 #, fuzzy
@@ -9515,8 +9529,13 @@ msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
 msgstr ""
+<<<<<<< HEAD
 "Le istanze che falliscono vengono contrassegnate come irraggiungibili e "
 "ritentate in un thread in background, quindi non verranno tentate a meno che "
+=======
+"Le istanze che falliscono sono contrassegnate come irraggiungibili e "
+"ritentate in un thread in background, quindi non saranno tentate a meno che "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "tutte le istanze non siano irraggiungibili."
 
 #: ../components/nethsm/pkcs11-setup.rst:150
@@ -9530,12 +9549,21 @@ msgid ""
 "failed)."
 msgstr ""
 "Se non è possibile generare un thread in background "
+<<<<<<< HEAD
 "(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), le istanze non funzionanti verranno "
 "tentate durante le normali operazioni, rallentando le richieste. Per ridurre "
 "al minimo questo problema, i controlli sanitari \"in linea\" sono limitati a "
 "timeout di 1 secondo e possono essere tentati solo 3 controlli sanitari per "
 "richiesta (questa è la situazione peggiore che può essere raggiunta solo se "
 "un gran numero di istanze fallisce)."
+=======
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), le istanze non funzionanti saranno "
+"tentate durante le normali operazioni, rallentando le richieste. Per ridurre "
+"al minimo questo problema, i controlli di salute \"in linea\" sono limitati "
+"a timeout di 1 secondo e possono essere tentati solo 3 controlli di salute "
+"per richiesta (questa è la situazione peggiore, che può essere raggiunta "
+"solo se un gran numero di istanze fallisce)."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:152
 msgid "Therefore:"
@@ -9562,8 +9590,13 @@ msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
 msgstr ""
+<<<<<<< HEAD
 "Il timeout massimo per una chiamata di funzione PKCS#11 varia perché alcune "
 "funzioni portano a più chiamate API nel NetHSM."
+=======
+"Il timeout massimo per una chiamata di funzione PKCS#11 può variare perché "
+"alcune funzioni portano a più chiamate API nel NetHSM."
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 
 #: ../components/nethsm/pkcs11-setup.rst:159
 msgid "TCP keepalive"
@@ -9579,7 +9612,11 @@ msgid ""
 "TCP keepalives for these."
 msgstr ""
 "Per migliorare le prestazioni, le connessioni vengono mantenute aperte con "
+<<<<<<< HEAD
 "le istanze NetHSM per evitare di doverle riaprire. È possibile che in una "
+=======
+"le istanze di NetHSM per evitare di doverle riaprire. È possibile che in una "
+>>>>>>> 61af9493c231b58683be87b296c8974e87380f3f
 "rete con un firewall queste connessioni inattive vengano chiuse, causando il "
 "timeout del tentativo di connessione successivo. Per evitare che si "
 "verifichino timeout lenti e per rilevarli prima, è possibile configurare dei "
