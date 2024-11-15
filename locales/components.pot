@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-14 13:42+0000\n"
+"POT-Creation-Date: 2024-11-15 08:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16766,38 +16766,42 @@ msgid "Changing IMEI"
 msgstr ""
 
 #: ../components/nitrowall/nw750/imei-change.rst:4
-msgid "To be able to change the IMEI of your device, the software `blue merle <https://github.com/srlabs/blue-merle>`_ is pre-installed."
+msgid "This is just a test."
 msgstr ""
 
 #: ../components/nitrowall/nw750/imei-change.rst:6
+msgid "To be able to change the IMEI of your device, the software `blue merle <https://github.com/srlabs/blue-merle>`_ is pre-installed."
+msgstr ""
+
+#: ../components/nitrowall/nw750/imei-change.rst:8
 msgid "After performing a factory reset, you need to `reinstall <https://github.com/srlabs/blue-merle#installation>`_ blue-merle."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:10
+#: ../components/nitrowall/nw750/imei-change.rst:12
 msgid "There a different ways to change the IMEI. The simplest is to use the toogle on the side of the NW750:"
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:12
+#: ../components/nitrowall/nw750/imei-change.rst:14
 msgid "Switch the hardware toggle."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:13
+#: ../components/nitrowall/nw750/imei-change.rst:15
 msgid "Follow the instructions on the display, which will prompt you to replace the SIM card eventually."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:14
+#: ../components/nitrowall/nw750/imei-change.rst:16
 msgid "After replacing the SIM card, flip the toggle again. This changes the IMEI and powers off your device."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:15
+#: ../components/nitrowall/nw750/imei-change.rst:17
 msgid "You should change your geographical location before booting again."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:17
+#: ../components/nitrowall/nw750/imei-change.rst:19
 msgid "For more details see `this documentation <https://github.com/srlabs/blue-merle/blob/main/Documentation.pdf>`_."
 msgstr ""
 
-#: ../components/nitrowall/nw750/imei-change.rst:19
+#: ../components/nitrowall/nw750/imei-change.rst:21
 msgid "Occasionally, commands executed on the device may take longer than expected. This can result in the display switching off (standby) for a few seconds before displaying the expected final message (e.g. instructions to replace the SIM card). Wait for the final message to appear before pulling the switch again. If no message is displayed after a minute, the script might have exited or you might have missed the message. In this case, pull the switch to continue / restart the process."
 msgstr ""
 
