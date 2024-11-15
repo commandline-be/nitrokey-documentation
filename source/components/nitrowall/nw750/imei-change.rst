@@ -1,6 +1,8 @@
 Changing IMEI
 =============
 
+This is just a test.
+
 To be able to change the IMEI of your device, the software `blue merle <https://github.com/srlabs/blue-merle>`_ is pre-installed.
 
 .. note:: After performing a factory reset, you need to `reinstall <https://github.com/srlabs/blue-merle#installation>`_ blue-merle.
